@@ -1,0 +1,7 @@
+/.dist
+/.github
+/.vs
+/.vscode
+/api/bin
+/api/obj
+/Properties
