@@ -9,13 +9,16 @@ namespace api.Data
 {
     public class ApplicationDBContext : DbContext
     {
-        public ApplicationDBContext(DbContextOptions dbContextOptions)
-        : base (dbContextOptions)
+        public ApplicationDBContext(DbContextOptions options) : base(options)
         {
-            
         }
 
-        public DbSet<Stock> Stocks {get; set;}
+        protected ApplicationDBContext()
+        {
+        }
+        // since we want to interact with the database and its tables? we use this?
+        // prop = creates a property
+        public DbSet<Stock> Stocks { get; set; }
         public DbSet<Comment> Comments {get; set;}
 
         
